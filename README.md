@@ -1,5 +1,16 @@
-## Foundry
+## BRB Staking with Foundry
 
+### Details of Staking Contract:
+* Initialization Requirement: “Users must be able to initialize their staking profile.”
+* Staking Tokens: “Users should be able to stake ERC20 tokens in the contract.”
+* Lockup Period: “A 7-day lockup period must be enforced before users can unstake their tokens.”
+* Unstaking Tokens: “Users should be able to unstake their tokens after the 7-day lockup period.”
+* Fixed Reward: “Upon successful unstaking after the lockup period, users should receive a fixed reward of 100 tokens.”
+* Reward Addition by Admin: “The admin should be able to add tokens to the reward pool.”
+
+
+
+### Details on Foundry Framework
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
 Foundry consists of:
