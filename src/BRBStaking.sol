@@ -118,13 +118,12 @@ contract BRBStaking is Ownable {
         require(user.initialized, "Stake not found");
         require(block.timestamp >= user.timeStamp + LOCKUP_PERIOD, "Lockup period not completed");
 
+        totalStaked -= user.stakeAmount;
 
         if (rewardPool >= REWARD_AMOUNT) {
             user.stakeAmount += REWARD_AMOUNT;
             rewardPool -= REWARD_AMOUNT;
         }
-
-        totalStaked -= user.stakeAmount;
 
         token.transfer(msg.sender, user.stakeAmount);
 
